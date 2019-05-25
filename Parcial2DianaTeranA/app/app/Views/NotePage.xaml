@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.Views.NotePage">
+    <ContentPage.Content>
+        <StackLayout
+                Padding="15"
+                BackgroundColor="Pink">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Notas"
+                        TextColor="Black"
+                    >
+                    
+                </Label>
+                <Entry
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Note,Mode=TwoWay}"
+                        Placeholder="Ingrese la Nota">
+                </Entry>
+
+            </Grid>
+            <Button
+                    BackgroundColor="Navy"
+                    Text="Registrar Nota"
+                    Command="{Binding NoteCommand,Mode=TwoWay}"
+                    IsEnabled="{Binding IsEnabled}"
+                    TextColor="White">
+            </Button>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
